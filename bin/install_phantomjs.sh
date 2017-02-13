@@ -20,6 +20,11 @@ sudo apt-get install -y libx11-dev libxext-dev
 
 git clone --recurse-submodules git://github.com/ariya/phantomjs.git
 cd phantomjs
+# added by YSL to fetch the latest version w/ build.py
+git checkout 2.1.1
+git submodule init
+git submodule update
+
 ./build.py
 
 cp bin/phantomjs /usr/bin/
